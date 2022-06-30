@@ -82,22 +82,6 @@ class Ui_BookInfo(object):
 
         self.horizontalLayout_2.addItem(self.horizontalSpacer_2)
 
-        self.starButton = IconToolButton(self.scrollAreaWidgetContents)
-        self.starButton.setObjectName(u"starButton")
-        self.starButton.setMinimumSize(QSize(40, 40))
-        self.starButton.setCursor(QCursor(Qt.PointingHandCursor))
-        self.starButton.setFocusPolicy(Qt.NoFocus)
-        self.starButton.setStyleSheet(u"")
-        icon = QIcon()
-        icon.addFile(u":/png/icon/icon_bookmark_off.png", QSize(), QIcon.Normal, QIcon.Off)
-        icon.addFile(u":/png/icon/icon_bookmark_on.png", QSize(), QIcon.Selected, QIcon.On)
-        self.starButton.setIcon(icon)
-        self.starButton.setIconSize(QSize(50, 50))
-        self.starButton.setCheckable(False)
-        self.starButton.setChecked(False)
-
-        self.horizontalLayout_2.addWidget(self.starButton)
-
         self.favoriteButton = IconToolButton(self.scrollAreaWidgetContents)
         self.favoriteButton.setObjectName(u"favoriteButton")
         self.favoriteButton.setMinimumSize(QSize(40, 40))
@@ -336,7 +320,6 @@ class Ui_BookInfo(object):
 
         self.retranslateUi(BookInfo)
         self.startRead.clicked.connect(BookInfo.StartRead)
-        self.starButton.clicked.connect(BookInfo.AddBookLike)
         self.favoriteButton.clicked.connect(BookInfo.AddFavorite)
         self.downloadButton.clicked.connect(BookInfo.AddDownload)
 
@@ -345,7 +328,6 @@ class Ui_BookInfo(object):
 
     def retranslateUi(self, BookInfo):
         BookInfo.setWindowTitle(QCoreApplication.translate("BookInfo", u"\u6f2b\u753b\u8be6\u60c5", None))
-        self.starButton.setText("")
         self.favoriteButton.setText("")
         self.downloadButton.setText("")
         self.startRead.setText(QCoreApplication.translate("BookInfo", u"\u5f00\u59cb\u9605\u8bfb", None))
