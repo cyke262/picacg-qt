@@ -59,18 +59,6 @@ class Ui_Rank(object):
 
         self.verticalLayout_4.addWidget(self.d30BookList)
 
-        self.tabWidget.addTab(self.widget_3, "")
-        self.widget_4 = QWidget()
-        self.widget_4.setObjectName(u"widget_4")
-        self.verticalLayout_5 = QVBoxLayout(self.widget_4)
-        self.verticalLayout_5.setObjectName(u"verticalLayout_5")
-        self.kindList = UserListWidget(self.widget_4)
-        self.kindList.setObjectName(u"kindList")
-
-        self.verticalLayout_5.addWidget(self.kindList)
-
-        self.tabWidget.addTab(self.widget_4, "")
-
         self.verticalLayout.addWidget(self.tabWidget)
 
 
@@ -87,6 +75,5 @@ class Ui_Rank(object):
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.widget_1), QCoreApplication.translate("Rank", u"24\u5c0f\u65f6", None))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.widget_2), QCoreApplication.translate("Rank", u"7\u5929", None))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.widget_3), QCoreApplication.translate("Rank", u"30\u5929", None))
-        self.tabWidget.setTabText(self.tabWidget.indexOf(self.widget_4), QCoreApplication.translate("Rank", u"\u9a91\u58eb\u699c", None))
     # retranslateUi
 
