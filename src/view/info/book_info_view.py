@@ -39,7 +39,6 @@ class BookInfoView(QtWidgets.QWidget, Ui_BookInfo, QtTaskBase):
         self.autorList.customContextMenuRequested.connect(self.CopyClickAutorItem)
 
         self.idLabel.setTextInteractionFlags(Qt.TextBrowserInteraction)
-        self.description.setTextInteractionFlags(Qt.TextBrowserInteraction)
 
         self.starButton.setToolButtonStyle(Qt.ToolButtonTextBesideIcon)
         self.starButton.setIconSize(QSize(50, 50))
@@ -49,7 +48,6 @@ class BookInfoView(QtWidgets.QWidget, Ui_BookInfo, QtTaskBase):
         self.favoriteButton.setIconSize(QSize(50, 50))
         self.commentButton.setToolButtonStyle(Qt.ToolButtonTextBesideIcon)
         self.commentButton.setIconSize(QSize(50, 50))
-        self.description.adjustSize()
         self.title.adjustSize()
 
         self.categoriesList.clicked.connect(self.ClickCategoriesItem)
@@ -153,7 +151,6 @@ class BookInfoView(QtWidgets.QWidget, Ui_BookInfo, QtTaskBase):
             self.idLabel.setText(info.id)
 
             self.bookName = info.title
-            self.description.setPlainText(info.description)
 
             for name in info.categories:
                 self.categoriesList.AddItem(name)
