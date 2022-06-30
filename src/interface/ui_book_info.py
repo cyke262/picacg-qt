@@ -345,12 +345,8 @@ class Ui_BookInfo(object):
 
     def retranslateUi(self, BookInfo):
         BookInfo.setWindowTitle(QCoreApplication.translate("BookInfo", u"\u6f2b\u753b\u8be6\u60c5", None))
-        self.setText(QCoreApplication.translate("BookInfo", u"TextLabel", None))
-        self.user_name.setText(QCoreApplication.translate("BookInfo", u"TextLabel", None))
-        self.updateTick.setText(QCoreApplication.translate("BookInfo", u"TextLabel", None))
         self.starButton.setText("")
         self.favoriteButton.setText("")
-        self.commentButton.setText("")
         self.downloadButton.setText("")
         self.startRead.setText(QCoreApplication.translate("BookInfo", u"\u5f00\u59cb\u9605\u8bfb", None))
         self.pageLabel.setText(QCoreApplication.translate("BookInfo", u"\u5206\u9875\uff1a", None))
@@ -360,10 +356,8 @@ class Ui_BookInfo(object):
         self.label_6.setText(QCoreApplication.translate("BookInfo", u"id:", None))
         self.idLabel.setText("")
         self.label_2.setText(QCoreApplication.translate("BookInfo", u"\u4f5c\u8005\uff1a", None))
-        self.label_3.setText(QCoreApplication.translate("BookInfo", u"\u63cf\u8ff0\uff1a", None))
         self.label_4.setText(QCoreApplication.translate("BookInfo", u"\u5206\u7c7b\uff1a", None))
         self.label_5.setText(QCoreApplication.translate("BookInfo", u"Tags\uff1a", None))
-        self.label_7.setText(QCoreApplication.translate("BookInfo", u"\u89c2\u770b\u6570\uff1a", None))
         self.views.setText(QCoreApplication.translate("BookInfo", u"\u89c2\u770b\u6570", None))
     # retranslateUi
 
