@@ -32,8 +32,7 @@ class Book(object):
     def __init__(self):
         self._id = ""             # 唯一标识
         self.title = ""           # 标题
-        self.author = ""          # 作者
-        self.description = ""     # 描述
+        self.author = ""          # 作者     # 描述
         self.epsCount = 0         # 章节数
         self.finished = False     # 是否完本
         self.categories = []      # 分类
@@ -96,7 +95,6 @@ class BookMgr(Singleton):
         info._id = dbBook.id
         info.title = dbBook.title
         info.author = dbBook.author
-        info.description = dbBook.description
         # info.epsCount = dbBook.epsCount
         info.finished = dbBook.finished
         info.pagesCount = dbBook.pages
