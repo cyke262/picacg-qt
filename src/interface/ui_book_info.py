@@ -75,27 +75,6 @@ class Ui_BookInfo(object):
         self.gridLayout_3.setObjectName(u"gridLayout_3")
         self.horizontalLayout_10 = QHBoxLayout()
         self.horizontalLayout_10.setObjectName(u"horizontalLayout_10")
-        self.user_icon = HeadLabel(self.scrollAreaWidgetContents)
-        self.user_icon.setObjectName(u"user_icon")
-        self.user_icon.setMinimumSize(QSize(50, 50))
-        self.user_icon.setMaximumSize(QSize(50, 50))
-
-        self.horizontalLayout_10.addWidget(self.user_icon)
-
-        self.verticalLayout_5 = QVBoxLayout()
-        self.verticalLayout_5.setObjectName(u"verticalLayout_5")
-        self.user_name = QLabel(self.scrollAreaWidgetContents)
-        self.user_name.setObjectName(u"user_name")
-
-        self.verticalLayout_5.addWidget(self.user_name)
-
-        self.updateTick = QLabel(self.scrollAreaWidgetContents)
-        self.updateTick.setObjectName(u"updateTick")
-
-        self.verticalLayout_5.addWidget(self.updateTick)
-
-
-        self.horizontalLayout_10.addLayout(self.verticalLayout_5)
 
         self.horizontalLayout_2 = QHBoxLayout()
         self.horizontalLayout_2.setObjectName(u"horizontalLayout_2")
@@ -132,18 +111,6 @@ class Ui_BookInfo(object):
         self.favoriteButton.setCheckable(False)
 
         self.horizontalLayout_2.addWidget(self.favoriteButton)
-
-        self.commentButton = IconToolButton(self.scrollAreaWidgetContents)
-        self.commentButton.setObjectName(u"commentButton")
-        self.commentButton.setMinimumSize(QSize(40, 40))
-        self.commentButton.setCursor(QCursor(Qt.PointingHandCursor))
-        self.commentButton.setStyleSheet(u"background-color:transparent;")
-        icon2 = QIcon()
-        icon2.addFile(u":/png/icon/icon_comment.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.commentButton.setIcon(icon2)
-        self.commentButton.setIconSize(QSize(50, 50))
-
-        self.horizontalLayout_2.addWidget(self.commentButton)
 
         self.downloadButton = IconToolButton(self.scrollAreaWidgetContents)
         self.downloadButton.setObjectName(u"downloadButton")
@@ -258,25 +225,6 @@ class Ui_BookInfo(object):
 
         self.verticalLayout_2.addLayout(self.horizontalLayout_4)
 
-        self.horizontalLayout_5 = QHBoxLayout()
-        self.horizontalLayout_5.setObjectName(u"horizontalLayout_5")
-        self.label_3 = QLabel(self.scrollAreaWidgetContents)
-        self.label_3.setObjectName(u"label_3")
-        self.label_3.setMaximumSize(QSize(40, 16777215))
-        self.label_3.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignTop)
-
-        self.horizontalLayout_5.addWidget(self.label_3)
-
-        self.description = QPlainTextEdit(self.scrollAreaWidgetContents)
-        self.description.setObjectName(u"description")
-        self.description.setStyleSheet(u"QPlainTextEdit {background-color:transparent;}")
-        self.description.setReadOnly(True)
-
-        self.horizontalLayout_5.addWidget(self.description)
-
-
-        self.verticalLayout_2.addLayout(self.horizontalLayout_5)
-
         self.horizontalLayout_6 = QHBoxLayout()
         self.horizontalLayout_6.setObjectName(u"horizontalLayout_6")
         self.label_4 = QLabel(self.scrollAreaWidgetContents)
@@ -347,23 +295,6 @@ class Ui_BookInfo(object):
 
         self.verticalLayout_2.addLayout(self.horizontalLayout_7)
 
-        self.horizontalLayout_9 = QHBoxLayout()
-        self.horizontalLayout_9.setObjectName(u"horizontalLayout_9")
-        self.label_7 = QLabel(self.scrollAreaWidgetContents)
-        self.label_7.setObjectName(u"label_7")
-        self.label_7.setMaximumSize(QSize(55, 20))
-
-        self.horizontalLayout_9.addWidget(self.label_7)
-
-        self.views = QLabel(self.scrollAreaWidgetContents)
-        self.views.setObjectName(u"views")
-        self.views.setMaximumSize(QSize(16777215, 20))
-
-        self.horizontalLayout_9.addWidget(self.views)
-
-
-        self.verticalLayout_2.addLayout(self.horizontalLayout_9)
-
 
         self.horizontalLayout.addLayout(self.verticalLayout_2)
 
@@ -414,7 +345,7 @@ class Ui_BookInfo(object):
 
     def retranslateUi(self, BookInfo):
         BookInfo.setWindowTitle(QCoreApplication.translate("BookInfo", u"\u6f2b\u753b\u8be6\u60c5", None))
-        self.user_icon.setText(QCoreApplication.translate("BookInfo", u"TextLabel", None))
+        self.setText(QCoreApplication.translate("BookInfo", u"TextLabel", None))
         self.user_name.setText(QCoreApplication.translate("BookInfo", u"TextLabel", None))
         self.updateTick.setText(QCoreApplication.translate("BookInfo", u"TextLabel", None))
         self.starButton.setText("")
