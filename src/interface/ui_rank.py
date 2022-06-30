@@ -56,6 +56,7 @@ class Ui_Rank(object):
         self.verticalLayout_4.setObjectName(u"verticalLayout_4")
         self.d30BookList = ComicListWidget(self.widget_3)
         self.d30BookList.setObjectName(u"d30BookList")
+        self.tabWidget.addTab(self.widget_3, "")
 
         self.verticalLayout_4.addWidget(self.d30BookList)
 
