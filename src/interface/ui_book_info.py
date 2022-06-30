@@ -258,25 +258,6 @@ class Ui_BookInfo(object):
 
         self.verticalLayout_2.addLayout(self.horizontalLayout_4)
 
-        self.horizontalLayout_5 = QHBoxLayout()
-        self.horizontalLayout_5.setObjectName(u"horizontalLayout_5")
-        self.label_3 = QLabel(self.scrollAreaWidgetContents)
-        self.label_3.setObjectName(u"label_3")
-        self.label_3.setMaximumSize(QSize(40, 16777215))
-        self.label_3.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignTop)
-
-        self.horizontalLayout_5.addWidget(self.label_3)
-
-        self.description = QPlainTextEdit(self.scrollAreaWidgetContents)
-        self.description.setObjectName(u"description")
-        self.description.setStyleSheet(u"QPlainTextEdit {background-color:transparent;}")
-        self.description.setReadOnly(True)
-
-        self.horizontalLayout_5.addWidget(self.description)
-
-
-        self.verticalLayout_2.addLayout(self.horizontalLayout_5)
-
         self.horizontalLayout_6 = QHBoxLayout()
         self.horizontalLayout_6.setObjectName(u"horizontalLayout_6")
         self.label_4 = QLabel(self.scrollAreaWidgetContents)
@@ -429,7 +410,6 @@ class Ui_BookInfo(object):
         self.label_6.setText(QCoreApplication.translate("BookInfo", u"id:", None))
         self.idLabel.setText("")
         self.label_2.setText(QCoreApplication.translate("BookInfo", u"\u4f5c\u8005\uff1a", None))
-        self.label_3.setText(QCoreApplication.translate("BookInfo", u"\u63cf\u8ff0\uff1a", None))
         self.label_4.setText(QCoreApplication.translate("BookInfo", u"\u5206\u7c7b\uff1a", None))
         self.label_5.setText(QCoreApplication.translate("BookInfo", u"Tags\uff1a", None))
         self.label_7.setText(QCoreApplication.translate("BookInfo", u"\u89c2\u770b\u6570\uff1a", None))
