@@ -340,6 +340,6 @@ class Ui_BookInfo(object):
         self.label_2.setText(QCoreApplication.translate("BookInfo", u"\u4f5c\u8005\uff1a", None))
         self.label_4.setText(QCoreApplication.translate("BookInfo", u"\u5206\u7c7b\uff1a", None))
         self.label_5.setText(QCoreApplication.translate("BookInfo", u"Tags\uff1a", None))
-        self.views.setText(QCoreApplication.translate("BookInfo", u"\u89c2\u770b\u6570", None))
+        # self.views.setText(QCoreApplication.translate("BookInfo", u"\u89c2\u770b\u6570", None))
     # retranslateUi
 

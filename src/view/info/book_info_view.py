@@ -39,17 +39,17 @@ class BookInfoView(QtWidgets.QWidget, Ui_BookInfo, QtTaskBase):
         self.autorList.customContextMenuRequested.connect(self.CopyClickAutorItem)
 
         self.idLabel.setTextInteractionFlags(Qt.TextBrowserInteraction)
-        self.description.setTextInteractionFlags(Qt.TextBrowserInteraction)
+        # self.description.setTextInteractionFlags(Qt.TextBrowserInteraction)
 
-        self.starButton.setToolButtonStyle(Qt.ToolButtonTextBesideIcon)
-        self.starButton.setIconSize(QSize(50, 50))
+        # self.starButton.setToolButtonStyle(Qt.ToolButtonTextBesideIcon)
+        # self.starButton.setIconSize(QSize(50, 50))
         self.downloadButton.setToolButtonStyle(Qt.ToolButtonTextBesideIcon)
         self.downloadButton.setIconSize(QSize(50, 50))
         self.favoriteButton.setToolButtonStyle(Qt.ToolButtonTextBesideIcon)
         self.favoriteButton.setIconSize(QSize(50, 50))
-        self.commentButton.setToolButtonStyle(Qt.ToolButtonTextBesideIcon)
-        self.commentButton.setIconSize(QSize(50, 50))
-        self.description.adjustSize()
+        # self.commentButton.setToolButtonStyle(Qt.ToolButtonTextBesideIcon)
+        # self.commentButton.setIconSize(QSize(50, 50))
+        # self.description.adjustSize()
         self.title.adjustSize()
 
         self.categoriesList.clicked.connect(self.ClickCategoriesItem)
@@ -71,15 +71,15 @@ class BookInfoView(QtWidgets.QWidget, Ui_BookInfo, QtTaskBase):
         # self.epsListWidget.setVerticalScrollMode(QAbstractItemView.ScrollPerPixel)
         # self.epsListWidget.verticalScrollBar().setStyleSheet(QssDataMgr().GetData('qt_list_scrollbar'))
         # self.epsListWidget.verticalScrollBar().setSingleStep(30)
-        self.user_name.setCursor(Qt.PointingHandCursor)
-        self.user_icon.setCursor(Qt.PointingHandCursor)
-        self.user_name.setTextInteractionFlags(Qt.TextBrowserInteraction)
-        self.user_icon.radius = 50
+        # self.user_name.setCursor(Qt.PointingHandCursor)
+        # self.user_icon.setCursor(Qt.PointingHandCursor)
+        # self.user_name.setTextInteractionFlags(Qt.TextBrowserInteraction)
+        # self.user_icon.radius = 50
         self.userIconData = None
-        self.user_name.installEventFilter(self)
-        self.user_icon.installEventFilter(self)
+        # self.user_name.installEventFilter(self)
+        # self.user_icon.installEventFilter(self)
 
-        self.commentButton.clicked.connect(self.OpenComment)
+        # self.commentButton.clicked.connect(self.OpenComment)
         # self.epsListWidget.verticalScrollBar().rangeChanged.connect(self.ChageMaxNum)
         self.epsListWidget.setMinimumHeight(300)
         self.ReloadHistory.connect(self.LoadHistory)
@@ -94,11 +94,14 @@ class BookInfoView(QtWidgets.QWidget, Ui_BookInfo, QtTaskBase):
             self.favoriteButton.setIcon(QIcon(":/png/icon/icon_like_off.png"))
 
     def UpdateLikeIcon(self):
+        pass
+        """     
         p = QPixmap()
         if not self.isLike:
             self.starButton.setIcon(QIcon(":/png/icon/icon_bookmark_off.png"))
         else:
             self.starButton.setIcon(QIcon(":/png/icon/icon_bookmark_on.png"))
+        """
 
     def Clear(self):
         self.ClearTask()
@@ -153,15 +156,15 @@ class BookInfoView(QtWidgets.QWidget, Ui_BookInfo, QtTaskBase):
             self.idLabel.setText(info.id)
 
             self.bookName = info.title
-            self.description.setPlainText(info.description)
+            # self.description.setPlainText(info.description)
 
             for name in info.categories:
                 self.categoriesList.AddItem(name)
             for name in info.tags:
                 self.tagsList.AddItem(name)
-            self.starButton.setText(str(info.totalLikes))
+            # self.starButton.setText(str(info.totalLikes))
             self.views.setText(str(info.totalViews))
-            self.commentButton.setText(str(getattr(info, "commentsCount", 0)))
+            # self.commentButton.setText(str(getattr(info, "commentsCount", 0)))
             self.isFavorite = info.isFavourite
             self.isLike = info.isLiked
             self.UpdateFavoriteIcon()
@@ -182,7 +185,7 @@ class BookInfoView(QtWidgets.QWidget, Ui_BookInfo, QtTaskBase):
             self.startRead.setEnabled(False)
             if hasattr(info, "_creator"):
                 creator = info._creator
-                self.user_name.setText(creator.get("name"))
+                # self.user_name.setText(creator.get("name"))
                 url2 = creator.get("avatar", {}).get("fileServer")
                 path2 = creator.get("avatar", {}).get("path")
                 if url2:
@@ -201,7 +204,7 @@ class BookInfoView(QtWidgets.QWidget, Ui_BookInfo, QtTaskBase):
     def LoadingPictureComplete(self, data, status):
         if status == Status.Ok:
             self.userIconData = data
-            self.user_icon.SetPicture(data)
+            # self.user_icon.SetPicture(data)
 
     def UpdatePicture(self, data, status):
         if status == Status.Ok:
@@ -342,13 +345,15 @@ class BookInfoView(QtWidgets.QWidget, Ui_BookInfo, QtTaskBase):
         return
 
     def AddBookLike(self):
+        pass
+        """         
         self.AddHttpTask(req.BookLikeReq(self.bookId))
         self.isLike = not self.isLike
         if self.isLike:
             self.starButton.setText(str(int(self.starButton.text()) + 1))
         else:
             self.starButton.setText(str(int(self.starButton.text()) - 1))
-        self.UpdateLikeIcon()
+        self.UpdateLikeIcon() """
 
     def AddFavorite(self):
         self.AddHttpTask(req.FavoritesAdd(self.bookId))
@@ -471,11 +476,11 @@ class BookInfoView(QtWidgets.QWidget, Ui_BookInfo, QtTaskBase):
                 if obj == self.picture:
                     if self.pictureData:
                         QtOwner().OpenWaifu2xTool(self.pictureData)
-                elif obj == self.user_icon:
-                    if self.userIconData:
-                        QtOwner().OpenWaifu2xTool(self.userIconData)
-                elif obj == self.user_name:
-                    QtOwner().OpenSearchByCreate(self.user_name.text())
+                # elif obj == self.user_icon:
+                    # if self.userIconData:
+                        # QtOwner().OpenWaifu2xTool(self.userIconData)
+                # elif obj == self.user_name:
+                    # QtOwner().OpenSearchByCreate(self.user_name.text())
                 return True
             else:
                 return False
